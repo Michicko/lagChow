@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
+:root {
+  --primary: #d2a556;
+  --gray: #f8f8f8;
+  --dark: #9aa2b1;
+  --darker: #545454;
+  --darkest: #000;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: var(--darker);
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
+
+header {
+  height: 10rem;
+  width: 100%;
+  padding: 0 8rem;
+}
+
+header nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div {
+  display: flex;
+  gap: 6rem;
+}
+
+.logo {
+  width: 6rem;
+  height: 5.7rem;
+}
+
+.logo.big{
+    width: 12rem;
+    height: 11.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--darkest);
+  position: relative;
+}
+
+.link::before {
+  position: absolute;
+  bottom: -0.5rem;
+  height: 3px;
+  width: 100%;
+  background: var(--primary);
+  content: "";
+  display: none;
+}
+
+.link.active::before,
+.link:hover::before {
+  display: block;
+}
+
+section {
+  min-height: calc(100vh - 10rem);
+  width: 100%;
+  padding: 8rem;
+  padding-top: 5rem;
+}
+
+section.grid {
+  display: grid;
+  column-gap: 4rem;
+  align-items: center;
+}
+
+section.big-left {
+  grid-template-columns: 4fr 3fr;
+}
+
+section.big-right {
+  grid-template-columns: 3fr 4fr;
+}
+
+section.big-right >*:nth-child(1) {
+  order: 2;
+}
+
+section.big-right >*:nth-child(2){
+  order: 1;
+}
+
+
+.img-box {
+  justify-self: center;
+}
+
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.btn {
+  padding: 1.2rem 2rem;
+}
+
+.btn.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-light {
+  color: white;
+}
+
+h1 {
+  font-size: 7rem;
+  font-weight: 400;
+  margin-top: -10rem;
+  line-height: 1;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+
+h1 span {
+  display: block;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--darkest);
+  margin-bottom: 2rem;
+}
+
+h2 span{
+  display: block;
+}
+
+.curved-img {
+  width: 40rem;
+  height: auto;
+  border-top-left-radius: 400px;
+  border-top-right-radius: 400px;
+}
+
+.lead,
+.section-lead {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--darkest);
+
+  span {
+    display: block;
+  }
+}
+
+.section-lead {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+
+p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--darker);
+}
+
+.box-flex p {
+  margin-bottom: 3rem;
+}
+
+section.grey, section.gray-bg {
+  background: var(--gray);
+}
+
+section.features {
+  min-height: calc(70vh);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 4rem;
+  row-gap: 4rem;
+  align-items: center;
+}
+
+section.features.el-4{
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--darkest);
+  margin-bottom: 1rem;
+}
+
+section.ca {
+  min-height: 70vh;
+  background: linear-gradient(
+      45deg,
+      rgba(84, 84, 84, 0.5),
+      rgba(84, 84, 84, 0.5)
+    ),
+    url("./images/lisa-fotios-restaurant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  color: white;
+}
+
+section.ca p {
+  font-size: 3rem;
+  color: inherit;
+  font-weight: 400;
+}
+
+section.ca h4 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 8rem;
+}
+
+footer img{
+    margin-bottom: 4rem;
+}
+
+footer div{
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+}
+.footer-link:hover::before, .footer-link:active::before, .footer-link.active::before{
+    display: none;
+}
+
+.gray-bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gray-bg .content-box{
+  max-width: 86rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray-bg .content-box button{
+  margin-top: 4rem;
+}
+
+section.reviews{
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+section.reviews div{
+  max-width: 76rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+}
+section.reviews blockquote{
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--darker);
+}
+
+section.menu{
+  min-height: 60vh;
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  align-items: flex-start;
+  grid-auto-rows: 1fr;
+}
+
+section.reviews h5{
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.full-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+.menu-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--darker);
+}
+
+.menu-item h3, .menu-item, p{
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--darker);
+  font-family: inherit;
+}
+
+.menu-item p{
+  color: var(--darkest);
+}
+
+.more-menu-btn{
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: .5rem;
+}
